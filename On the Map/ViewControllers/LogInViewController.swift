@@ -46,7 +46,7 @@ class LogInViewController: UIViewController {
         viewModel.callLogInService(email, password) { (data, error) in
             guard data?.session != nil else {
                 DispatchQueue.main.async {
-                    self.showLogInAlert("Log In Failed", message: "Log in failed. Please enter User name and Password again and retry!")
+                    self.showLogInAlert("Log In Failed", message: "Log in failed. Please retry after sometime!")
                 }
                 return
             }

@@ -27,7 +27,7 @@ class NetworkMananger {
     
     func getStudentLocations(completion: @escaping (_ result: [StudentLocationsResponse]?, _ success: Bool, _ error: String?) -> Void){
         
-        let request = URLRequest(url: URL(string: "https://onthemap-api.udacity.com/v1/StudentLocation?order=-updatedAt")!)
+        let request = URLRequest(url: URL(string: "https://onthemap-api.udacity.com/v1/StudentLocation?limit=100")!)
         let session = URLSession.shared
         let task = session.dataTask(with: request) { data, response, error in
             if error != nil { // Handle error...
